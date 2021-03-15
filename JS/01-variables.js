@@ -1,61 +1,47 @@
+const pirmasskaicius = 7;
+const antrasskaicius = 77;
+const suma = pirmasskaicius + antrasskaicius;
 
-const pirmasskaicius = 5;
-console.log(pirmasskaicius);
+console.log(pirmasskaicius, '+', antrasskaicius, '=', suma)
 
-const antrasskaicius = 10;
-console.log(antrasskaicius);
-
-const treciasskaicius = 15;
-console.log(treciasskaicius);
-
-const suma = pirmasskaicius + antrasskaicius + treciasskaicius
-
-console.log('Suma: ', suma)
+const mathText=pirmasskaicius + '+';
+console.log(mathText);
 
 console.log('......');
 
-const raide1 = 'A';
-console.log(raide1);
+const petrasName = 'Petras';
+const age = 99;
 
-const raide2 = 'B';
-console.log(raide2);
+//Petras age is 99
+const petrasAge = petrasName + ' age is ' + age +'.';
+console.log(petrasAge);
+console.log('......');
 
-const raide3 = 'C';
-console.log(raide3);
+//sarasas (array)
+const pazymiai = [5, 7, 8, 10];
+console.log(pazymiai);
 
-const abc = raide1 +' '+ raide2 +' ' + raide3;
+const abc = ['a', 'b', 'c', 'd', 'f'];
 console.log(abc);
 
-console.log('......');
+//Pazymiu suma: 20
+const pazymiuSuma= pazymiai[0] + pazymiai[1] + pazymiai[2]+ pazymiai[3];
+console.log('Pazymiu suma:', pazymiuSuma);
 
-const plius1nas = [1, 2, 3, 4, 5];
-console.log(plius1nas);
-const suma1 = plius1nas[0] - plius1nas[1] + plius1nas[2] - plius1nas[3] + plius1nas[4];
-console.log('Suma: ', suma1);
+const pazymiuKiekis = pazymiai.length;
+const pazymiuVidurkis=pazymiuSuma / pazymiuKiekis;
 
-const plius2 = [2, 4, 6, 8, 10];
-console.log(plius2);
-const suma2 = plius2[0] - plius2[1] + plius2[2] - plius2[3] + plius2[4];
-console.log('Suma: ', suma2);
+console.log('Pazymiu suma',pazymiuSuma);
+console.log('Pazymiu kiekis', pazymiuKiekis);
+console.log('Pazymiu vidurkis', pazymiuVidurkis);
 
-const plius3ys = [3, 6, 9, 12, 15];
-console.log(plius3ys);
-const suma3 = plius3ys[0] - plius3ys[1] + plius3ys[2] - plius3ys[3] + plius3ys[4];
-console.log('Suma: ', suma3);
 
-console.log('......');
+//iš kur žinoti 5 raidžių abėcėlės paskutinė raidė yra f iš kur žinoti
 
-const tekstas = ['a', 'b', 'c', 'd', 'e'];
-console.log(tekstas);
-const eile = tekstas[4] + ', ' + tekstas[3] + ', ' + tekstas[2] + ', '+ tekstas[1]+ ', '+ tekstas[0];
-console.log(eile)
+const abcIlgis = abc.length;
+const paskutinesRaidesPozicija = abcIlgis - 1;
+const paskutineRaide = abc[paskutinesRaidesPozicija];
 
-const tekstas2 = ['?', 'dėlionė', 'per', 'čia', 'Kas'];
-console.log(tekstas2);
-const eile2 = tekstas2[4] + ', ' + tekstas2[3] + ', ' + tekstas2[2] + ', '+ tekstas2[1]+ ', '+ tekstas2[0];
-console.log(eile2)
-
-const tekstas3 = ['pradžios', 'iki', 'galo', 'sąrašo', 'Nuo'];
-console.log(tekstas3);
-const eile3 = tekstas3[4] + ', ' + tekstas3[3] + ', ' + tekstas3[2] + ', '+ tekstas3[1]+ ', '+ tekstas3[0];
-console.log(eile3);
+const abcAtsakymas = 'Is mums zinomos ' +  abcIlgis + 'raidziu abeceles paskutine yra "' + paskutineRaide + '".';
+console.log(abcAtsakymas)
+ 
