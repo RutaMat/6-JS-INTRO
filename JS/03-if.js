@@ -78,6 +78,7 @@ if (userLogginIn) {
 
     console.log("------");  
     // sablono else if naudojimas
+
 const akys = 'Rudos';
 
 if (akys === 'Melynos') {
@@ -86,26 +87,71 @@ if (akys === 'Melynos') {
     console.log('Sexy 💘');
 } else if (akys === 'Rudos') {
     console.log('Melagis?👌');
-}else if (akys === 'Pilkos') {
+} else if (akys === 'Pilkos') {
     console.log('Niekuo neipatingi...');
 }
 // ta pati kaip pries uzduotis tik kitu budu
 
 if (akys === 'Melynos') {
-    console.log('Oi kokie fainulkos!!!');
-} else 
-{
-     if (akys === 'Zalios') {
-        console.log('Sexy 💘')
+    console.log('Oj kokie fainulkos!!!');
+} else {
+    if (akys === 'Zalios') {
+        console.log('Sexy 💘');
     } else {
         if (akys === 'Rudos') {
-            console.log('Melagis?👌');
+            console.log('Melagis? 👌');
         } else {
-            if (akys === 'Pilkos');
-            console.log('Niekuo neipatingi...');
-        } else {
-   
-    console.log('A tu turi akis?'); }
-   }
+            if (akys === 'Pilkos') {
+                console.log('Niekuo neipatinngi...');
+            } else {
+                if (akys === 'Raudonos') {
+                    console.log('👨‍💻👩‍💻');
+                } else {
+                    console.log('A tu turi akis?');
+                }
+            }
+        }
+    }
+}
+
+
+
+
+console.log('---');
+
+if (akys === 'Melynos') {
+    console.log('Oj kokie fainulkos!!!');
+}
+
+if (akys === 'Zalios') {
+    console.log('Sexy 🥰🥰');
+}
+
+if (akys === 'Rudos') {
+    console.log('Melagis? 🤔');
+}
+
+if (akys === 'Pilkos') {
+    console.log('Niekuo neipatinngi...');
+}
+
+if (akys === 'Raudonos') {
+    console.log('👨‍💻👩‍💻');
+}
+
+if (akys !== 'Melynos' &&
+    akys !== 'Zalios' &&
+    akys !== 'Rudos' &&
+    akys !== 'Pilkos' &&
+    akys !== 'Raudonos') {
+    console.log('A tu turi akis?');
+}
+
+if (akys === 'Melynos' ||
+    akys === 'Zalios' ||
+    akys === 'Rudos' ||
+    akys === 'Pilkos' ||
+    akys === 'Raudonos') {
+    console.log('Tu turi vienas is man zinomu akiu spalvu!');
 }
 
