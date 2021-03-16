@@ -20,3 +20,19 @@ console.log(text, '->', reverse);
 //for (let i = text.length; i > 0; i--) {
   //  reverse += text[i-1];
 //}
+
+const pirmaszodis = 'Lietuva';
+reverseString(pirmaszodis);
+
+reverseString('gimtine');
+reverseString('sedek uz kedes');
+
+function reverseString(text) {
+let reverse = '';
+
+for (let i = 0; i < text.length; i++) {
+reverse = text[i] + reverse;
+} 
+
+console.log(text, '->', reverse);
+}

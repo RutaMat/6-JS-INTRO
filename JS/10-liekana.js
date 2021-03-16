@@ -10,13 +10,13 @@ Skaičių intervale tarp 0 ir 11, besidalijančių be liekanos iš 7 yra 2 viene
 
 */
 
-const nuo = 0;
-const iki = 11;
-const daliklis = 3;
+const nuo = -18;
+const iki = 18;
+const daliklis = 5;
 let kiekis = 0;
 
 for (let i = nuo; i <= iki; i++) {
-    //console.log(i, i% daliklis);
+    // keiciam console.log(i, i% daliklis);
     if (i % daliklis === 0){
         kiekis++;
         // tas pat kiekis += 1;
