@@ -5,15 +5,18 @@ function daugyba(a, b) {
    if ( typeof a !== 'number') {
        return 'Pirmasis parametras turi buti skaiciaus tipo';
    }
-   if (isNaN(a)|| a === Infinity || a === -Infinity) {
+      if (isFinite(a)) {
     return `Pirmasis parametras turi buti normalus skaicius ir negali buti ${a}`;
 }
  // ir a ir b parametrai turi po 3 patikras
    if ( typeof b !== 'number') {
     return 'Antrasis parametras turi buti skaiciaus tipo';
 }
-   if (isNaN(b)|| b === Infinity || b === -Infinity)  {
+
+   if (isFinite(b))  {
     return `Antrasis parametras turi buti normalus skaicius ir negali buti ${b}`;
+    // sia eil keicia virsutine  if (''+ b === 'NaN' || Math.abs(b) === Infinity)  {
+    // si eilute susidaro is 3ju apatiniu . o virsutine jos sutrumpinimas if (isNaN(b) || b === Infinity || b === -Infinity) {
 //   if (isNaN(b)) {
   //  return 'Antrasis parametras turi buti skaiciaus tipo';}
  //  if (b === Infinity) {
