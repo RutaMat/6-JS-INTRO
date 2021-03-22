@@ -1,14 +1,15 @@
-//Gimines medyje reikia rasti kas buvo yra vyriausias
+/*
+Gimines medyje reikia rasti kas buvo/yra vyriausias?
+*/
 
 function oldest(asmuo) {
-
     let biggestAge = asmuo.age;
     let childAge = 0;
 
     if (asmuo.children) {
-        for (let i=0; i<asmuo.children.length; i++) {
+        for (let i = 0; i < asmuo.children.length; i++) {
             const child = asmuo.children[i];
-//esme to pacio asmens pradine funkcija su gilesne info. si eliute pagr.si eil sukasi begale kartu. cia ne raktazodis. funkcijos pavadinimas kuris atlieka paieska.
+
             childAge = oldest(child);
 
             if (childAge > biggestAge) {
@@ -16,33 +17,76 @@ function oldest(asmuo) {
             }
         }
     }
+
     return biggestAge;
-    
 }
+
+function oldestWithName(asmuo) {
+    let oldestName = asmuo.name;
+    let biggestAge = asmuo.age;
+
+    if (asmuo.children) {
+        for (let i = 0; i < asmuo.children.length; i++) {
+            const child = asmuo.children[i];
+
+            const oldestChild = oldestWithName(child);
+
+            if (oldestChild.age > biggestAge) {
+                biggestAge = oldestChild.age;
+                oldestName = oldestChild.name;
+            }
+        }
+    }
+
+    return {
+        name: oldestName,
+        age: biggestAge
+    };
+}
+
 const gimine1 = {
     name: 'Petras',
     age: 40,
     children: [
-        { 
-            nare: 'Maryte',
+        {
+            name: 'Maryte',
             age: 45,
             children: [
                 {
                     name: 'Onute',
-                    age: 78
+                    age: 70
                 },
                 {
                     name: 'Elvyra',
-                    age: 55
-                }
+                    age: 66
+                },
             ]
         },
         {
-            nare: 'Jonas',
-            age: 43
-        }
+            name: 'Jonas',
+            age: 43,
+            children: [
+                {
+                    name: 'Aleksas',
+                    age: 20,
+                    children: [
+                        {
+                            name: 'Gokas',
+                            age: 200
+                        }
+                    ]
+                },
+                {
+                    name: 'Gabriele',
+                    age: 80
+                },
+            ]
+        },
     ]
 }
 
 const vyriausias = oldest(gimine1);
-console.log(vyriausias)
+console.log(vyriausias);
+
+const vyriausiasAsmuo = oldestWithName(gimine1);
+console.log(vyriausiasAsmuo);
