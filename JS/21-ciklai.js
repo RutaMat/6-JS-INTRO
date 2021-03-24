@@ -158,11 +158,89 @@ console.clear(mapList);
 
 const sortList = [1, -5, 78, -14, 0, -3, 11]; 
 const sortAbc =['a', 'citrina', 'd', 'M']
-const sortedNumber = [...sortList].sort((a, b) => a > b ? -1 : 1 ); //pvz 11, 2 => 2, 11 kai norim suzinoti kuris didesnis kitas budas < pakeisti arba tiesiog => a - b 
+const sortedNumber = sortList.sort((a, b) => a > b ? -1 : 1 ); //pvz 11, 2 => 2, 11 kai norim suzinoti kuris didesnis kitas budas < pakeisti arba tiesiog => a - b 
 const sorteAbc = sortAbc.sort();
 
 console.log(sortedNumber);
 console.log(sorteAbc);
+
+/********** */
+console.clear ();
+
+const spread1 = [5, 9];
+console.log(spread1);
+
+//const spread2 = [5, 9, 7];
+// reiksmes pakeisti galima i zemiau esancia const spread2 = [spread1[0], spread1[1], 7];
+const spread2 = [... spread1, 7];
+console.log(spread2);
+
+const spread3 = [10, 4, 9]
+console.log(spread3);
+//pasiziadimui
+const spread4 = [... spread1, true, 'labas', ...spread3];
+console.log(spread4);
+
+console.clear ();
+
+const average = (...list) => {
+    const sum = list.reduce((total, num) => total + num, 0);
+    return sum / list.length;
+
+}
+
+
+const ave = average(10, 2, 8, 4, 6);
+console.log(ave);
+
+const apieMane = (name, age) => {
+    return`Sveiki, as esu ${name}, man yra ${age} metu ir as megstu: ${list.join(',')}.`;
+
+}
+
+const petras = apieMane('Petras', 55, 'pyragus', 'obuoli');
+console.log(petras);
+
+console.clear ();
+
+let a = 5;
+let b = 999;
+
+b = a;
+
+console.log(a);
+console.log(b);
+
+a = 777;
+console.log(a);
+console.log(b);
+
+console.log('***************');
+//Dabar apie KOMPLEKSINES reiksmes
+
+//kas negerai. Jie savi laiko daug ivairiu reiksmiu, informacijos
+
+//jeigu reiktu priasimint
+let cc = [4, 44];
+let dd = [8, 88];
+
+console.log(cc);
+console.log(dd);
+
+dd = cc;
+
+console.log(cc);
+console.log(dd);
+// kas bus kai overaidinsime i kruva vientu
+
+cc[0] =11111;
+
+console.log(cc);
+console.log(dd);
+
+console.log('***************');
+console.clear ();
+
 
 
 
